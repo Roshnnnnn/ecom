@@ -1,5 +1,4 @@
 .nav-container {
-	background-color: red;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,13 +10,13 @@
 
 .nav-container1 {
 	display: flex;
-	margin: 0.5rem;
+	margin: 0.9rem;
 }
 
 .nav-container2 {
 	display: flex;
 }
 
-.text-container {
+.text-containers {
 	margin: 20px;
 }
