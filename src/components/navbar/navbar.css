@@ -1,0 +1,23 @@
+.nav-container {
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	height: 5rem;
+}
+
+.nav-container1 {
+	display: flex;
+	margin: 0.5rem;
+}
+
+.nav-container2 {
+	display: flex;
+}
+
+.text-container {
+	margin: 20px;
+}
