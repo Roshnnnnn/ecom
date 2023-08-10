@@ -1,0 +1,21 @@
+.empty-wish {
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.custom-icon {
+	width: 100px;
+	height: 100px;
+	fill: var(--gray=800);
+	opacity: 0.7;
+}
+
+.main-text {
+	font-size: 1rem;
+	color: var(--gray-800);
+	letter-spacing: 0.2rem;
+}
