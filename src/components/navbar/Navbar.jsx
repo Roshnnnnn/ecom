@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
-import { AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
+import {
+	AiOutlineSearch,
+	AiOutlineHeart,
+	AiOutlineClose,
+} from "react-icons/ai";
+import { TiThMenu } from "react-icons/ti";
 import { BiShoppingBag } from "react-icons/bi";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
+	const [showMenu, setShowMenu] = useState(false);
+	const [showSearch, setShowSearch] = useState(false);
 	return (
-		<div className="nav-container">
-			<div className="text-containers">Roshan</div>
-			<div className="nav-container1">
-				<div className="text-containers">Home</div>
-				<div className="text-containers">Products</div>
+		<div className="nav-bar">
+			<div className="left-nav">
+				{showMenu ? (
+					<AiOutlineClose
+						className="icon"
+						onClick={() => setShowMenu(false)}
+						width="1em"
+						height="1em"
+						viewBox="0 0 512 512"
+					/>
+				) : (
+					<TiThMenu
+						className="icon"
+						onClick={() => setShowMenu(true)}
+						width="1em"
+						height="1em"
+						viewBox="0 0 512 512"
+					/>
+				)}
+				<Link to={"/"}>Roshan</Link>
 			</div>
-			<div className="nav-container2">
-				<div className="text-containers">
-					<AiOutlineSearch />
-				</div>
-				<div className="text-containers">
-					<AiOutlineHeart />
-				</div>
-				<div className="text-containers">
-					<BiShoppingBag />
+			<ul className="mid-nav-links">
+				<li>
+					<NavLink to="/">HOME</NavLink>
+				</li>
+				<li>
+					<NavLink to="/product">Products</NavLink>
+				</li>
+			</ul>
+			<div className="right-nav-links">
+				<div>
+					<span className="badge">
+						<AiOutlineSearch
+							onClick={() => showSearch(true)}
+							width={"1em"}
+							height={"1em"}
+							viewBox="0 0 32 32"
+						/>
+					</span>
+					<SearchBar />
 				</div>
 			</div>
 		</div>
