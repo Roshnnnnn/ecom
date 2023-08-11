@@ -33,7 +33,7 @@ const Navbar = () => {
 						viewBox="0 0 512 512"
 					/>
 				)}
-				{/* <Link to={"/"}>Roshan</Link> */}
+				<Link to={"/"}>Roshan</Link>
 			</div>
 			<ul className="mid-nav-links">
 				<li>
