@@ -14,7 +14,7 @@ const Navbar = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showSearch, setShowSearch] = useState(false);
 	return (
-		<div className="nav-bar">
+		<nav className="nav-bar">
 			<div className="left-nav">
 				{showMenu ? (
 					<AiOutlineClose
@@ -33,7 +33,7 @@ const Navbar = () => {
 						viewBox="0 0 512 512"
 					/>
 				)}
-				<Link to={"/"}>Roshan</Link>
+				{/* <Link to={"/"}>Roshan</Link> */}
 			</div>
 			<ul className="mid-nav-links">
 				<li>
@@ -56,7 +56,7 @@ const Navbar = () => {
 					<SearchBar />
 				</div>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
